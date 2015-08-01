@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="ROOT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${log.home}/root.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>TRACE</level>
+        </filter>
+        <!-- 可让每天产生一个日志文件，最多 10 个，自动回滚 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/root.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="DEMO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${log.home}/demo.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/demo.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <appender name="DEMO-ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${log.home}/demo-error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/demo-error.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+	        <level>ERROR</level>
+	        <onMatch>ACCEPT</onMatch>
+	        <onMismatch>DENY</onMismatch>
+	    </filter>
+    </appender>
+    
+    <appender name="SQL" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${log.home}/sql.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/sql.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+	
+	<root>
+		<level value="${log.level}" />
+		<appender-ref ref="ROOT" />
+	</root>
+	
+	<!-- demo -->
+	<logger name="cn.com.ykse.skeleton.demo" additivity="false">
+		<level value="${log.level}" />
+		<appender-ref ref="DEMO" />
+        <appender-ref ref="DEMO-ERROR" />
+	</logger>
+
+	<!-- sql  -->
+    <logger name="java.sql" additivity="false">
+        <level value="${log.level}"/>
+        <appender-ref ref="SQL" />
+    </logger>
+    <logger name="org.mybatis" additivity="false">
+        <level value="${log.level}"/>
+        <appender-ref ref="SQL" />
+    </logger>
+
+	<!-- third -->
+	<logger name="org.springframework" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="ROOT" />
+	</logger>
+	<logger name="org.apache" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="ROOT" />
+	</logger>
+    
+</configuration>

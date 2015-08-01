@@ -15,10 +15,113 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
+			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 	</dependencies>
 	<build>
 		<finalName>baseproject-web</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/webapp</directory>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>logback.xml</exclude>
+						<exclude>logback-test.xml</exclude>
+						<exclude>assembly.xml</exclude>
+					</excludes>
+					<outputDirectory>target/${project.build.finalName}/WEB-INF/lib</outputDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-a-jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<packagingExcludes>WEB-INF/classes/**/*</packagingExcludes>
+					<archiveClasses>false</archiveClasses>
+					<webResources>
+						<resource>
+							<directory>src/main/webapp/WEB-INF</directory>
+							<targetPath>WEB-INF</targetPath>
+							<filtering>true</filtering>
+						</resource>
+					</webResources>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-a-war</id>
+						<phase>package</phase>
+						<goals>
+							<goal>war</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptor>src/main/resources/assembly.xml</descriptor>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>development</id>
+			<properties>
+				<properties.name>development</properties.name>
+				<log.home>E:/logs/baseproject</log.home>
+				<log.level>debug</log.level>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<properties.name>test</properties.name>
+				<log.home>E:/logs/baseproject</log.home>
+				<log.level>info</log.level>
+			</properties>
+		</profile>
+		<profile>
+			<id>production</id>
+			<properties>
+				<properties.name>production</properties.name>
+				<log.home>E:/logs/baseproject</log.home>
+				<log.level>info</log.level>
+			</properties>
+		</profile>
+	</profiles>
 </project>
