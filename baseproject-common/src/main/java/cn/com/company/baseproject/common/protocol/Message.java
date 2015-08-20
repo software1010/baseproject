@@ -6,7 +6,7 @@ package cn.com.company.baseproject.common.protocol;
  * @author Ron
  * @date 2015年8月1日
  */
-public class Result {
+public class Message {
 	/**
 	 * 返回码
 	 */
