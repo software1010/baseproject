@@ -10,9 +10,9 @@
 	<fileSets>
 		<fileSet>
 			<directory>src/main/resources</directory>
-			<outputDirectory>etc</outputDirectory>
+			<outputDirectory>resources</outputDirectory>
 			<includes>
-				<include>datasource.properties</include>
+				<include>profile/${profile.name}.properties</include>
 				<include>logback.xml</include>
 			</includes>
 		</fileSet>

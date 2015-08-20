@@ -107,7 +107,7 @@
 		<profile>
 			<id>development</id>
 			<properties>
-				<properties.name>development</properties.name>
+				<profile.name>development</profile.name>
 				<log.home>E:/logs/baseproject</log.home>
 				<log.level>debug</log.level>
 			</properties>
@@ -118,7 +118,7 @@
 		<profile>
 			<id>test</id>
 			<properties>
-				<properties.name>test</properties.name>
+				<profile.name>test</profile.name>
 				<log.home>E:/logs/baseproject</log.home>
 				<log.level>info</log.level>
 			</properties>
@@ -126,7 +126,7 @@
 		<profile>
 			<id>production</id>
 			<properties>
-				<properties.name>production</properties.name>
+				<profile.name>production</profile.name>
 				<log.home>E:/logs/baseproject</log.home>
 				<log.level>info</log.level>
 			</properties>

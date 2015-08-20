@@ -21,8 +21,8 @@
         </encoder>
     </appender>
 
-    <appender name="DEMO" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    	<file>${log.home}/demo.log</file>
+    <appender name="DEFAULT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${log.home}/default.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log.home}/demo.log.%d{yyyy-MM-dd}</fileNamePattern>
             <maxHistory>10</maxHistory>
@@ -32,8 +32,8 @@
         </encoder>
     </appender>
     
-    <appender name="DEMO-ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    	<file>${log.home}/demo-error.log</file>
+    <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${log.home}/error.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log.home}/demo-error.log.%d{yyyy-MM-dd}</fileNamePattern>
             <maxHistory>10</maxHistory>
@@ -65,7 +65,7 @@
 	</root>
 	
 	<!-- demo -->
-	<logger name="cn.com.ykse.skeleton.demo" additivity="false">
+	<logger name="cn.com.company.baseproject" additivity="false">
 		<level value="debug" />
 		<appender-ref ref="STDOUT" />
 	</logger>
