@@ -25,6 +25,10 @@
 			<groupId>cn.com.company</groupId>
 			<artifactId>baseproject-biz</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>cn.com.company</groupId>
+			<artifactId>baseproject-api</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>baseproject-web</finalName>

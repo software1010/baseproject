@@ -11,6 +11,7 @@
 		ignore-unresolvable="true" />
 
 	<import resource="spring-mybatis.xml"/>
+	<import resource="dubbo.xml"/>
 
 	<context:annotation-config />
 
