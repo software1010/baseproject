@@ -111,7 +111,7 @@
 		<profile>
 			<id>development</id>
 			<properties>
-				<profile.name>development</profile.name>
+				<profile.name>dev</profile.name>
 				<log.home>E:/logs/baseproject</log.home>
 				<log.level>debug</log.level>
 			</properties>
@@ -130,7 +130,7 @@
 		<profile>
 			<id>production</id>
 			<properties>
-				<profile.name>production</profile.name>
+				<profile.name>prod</profile.name>
 				<log.home>E:/logs/baseproject</log.home>
 				<log.level>info</log.level>
 			</properties>

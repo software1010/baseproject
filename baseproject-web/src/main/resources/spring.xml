@@ -7,7 +7,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<context:property-placeholder
-		location="classpath:profile/${profile.name}.properties"
+		location="classpath:profiles/${profile.name}/*.properties"
 		ignore-unresolvable="true" />
 
 	<import resource="spring-mybatis.xml"/>
