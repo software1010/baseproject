@@ -70,7 +70,7 @@
         <level value="${log.level}"/>
         <appender-ref ref="SQL" />
     </logger>
-    <logger name="org.mybatis" additivity="false">
+    <logger name="org.apache.ibatis" additivity="false">
         <level value="${log.level}"/>
         <appender-ref ref="SQL" />
     </logger>

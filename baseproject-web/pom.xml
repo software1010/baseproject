@@ -112,7 +112,15 @@
 			<id>development</id>
 			<properties>
 				<profile.name>dev</profile.name>
-				<log.home>E:/logs/baseproject</log.home>
+				<log.home>E:/logs/app</log.home>
+				<log.level>debug</log.level>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<profile.name>test</profile.name>
+				<log.home>E:/logs/app</log.home>
 				<log.level>debug</log.level>
 			</properties>
 			<activation>
@@ -120,18 +128,10 @@
 			</activation>
 		</profile>
 		<profile>
-			<id>test</id>
-			<properties>
-				<profile.name>test</profile.name>
-				<log.home>E:/logs/baseproject</log.home>
-				<log.level>info</log.level>
-			</properties>
-		</profile>
-		<profile>
 			<id>production</id>
 			<properties>
 				<profile.name>prod</profile.name>
-				<log.home>E:/logs/baseproject</log.home>
+				<log.home>E:/logs/app</log.home>
 				<log.level>info</log.level>
 			</properties>
 		</profile>
