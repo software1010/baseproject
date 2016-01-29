@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
+<included>
 	<appender name="ROOT" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${log.home}/root.log</file>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
@@ -59,19 +59,15 @@
 	</root>
 	
 	<!-- baseproject -->
-	<logger name="cn.com.company.baseproject" additivity="false">
+	<logger name="cn.com.company.baseproject.biz" additivity="false">
 		<level value="${log.level}" />
 		<appender-ref ref="DEFAULT" />
         <appender-ref ref="ERROR" />
 	</logger>
 
 	<!-- sql  -->
-    <logger name="java.sql" additivity="false">
-        <level value="${log.level}"/>
-        <appender-ref ref="SQL" />
-    </logger>
-    <logger name="org.apache.ibatis" additivity="false">
-        <level value="${log.level}"/>
+    <logger name="cn.com.company.baseproject.repository" additivity="false">
+        <level value="debug"/>
         <appender-ref ref="SQL" />
     </logger>
 
@@ -85,4 +81,4 @@
 		<appender-ref ref="ROOT" />
 	</logger>
     
-</configuration>
+</included>

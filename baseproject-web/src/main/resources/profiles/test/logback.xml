@@ -59,14 +59,14 @@
 	</root>
 	
 	<!-- baseproject -->
-	<logger name="cn.com.company.baseproject" additivity="false">
+	<logger name="cn.com.company.baseproject.biz" additivity="false">
 		<level value="${log.level}" />
 		<appender-ref ref="DEFAULT" />
         <appender-ref ref="ERROR" />
 	</logger>
 
 	<!-- sql  -->
-    <logger name="org.mybatis" additivity="false">
+    <logger name="cn.com.company.baseproject.repository" additivity="false">
         <level value="debug"/>
         <appender-ref ref="SQL" />
     </logger>
