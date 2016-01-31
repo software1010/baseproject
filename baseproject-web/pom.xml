@@ -37,6 +37,10 @@
 			<groupId>cn.com.company</groupId>
 			<artifactId>baseproject-api</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.github.ziplet</groupId>
+			<artifactId>ziplet</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>baseproject-web</finalName>

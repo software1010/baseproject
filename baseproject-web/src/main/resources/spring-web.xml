@@ -34,9 +34,13 @@
 		<property name="cache" value="true" />
 		<property name="prefix" value="" />
 		<property name="suffix" value=".ftl" />
+		<property name="exposeRequestAttributes" value="true" />
+		<property name="requestContextAttribute" value="request"/>
 		<property name="contentType" value="text/html;charset=utf-8" />
 	</bean>
 
+	<mvc:resources location="/static/" mapping="/static/**"></mvc:resources>
+	
 	<mvc:annotation-driven />
 
 </beans>

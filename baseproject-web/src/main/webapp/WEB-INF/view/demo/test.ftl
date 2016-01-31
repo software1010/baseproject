@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Insert title here</title>
-</head>
-<body>
-	Welcome demo test!!!
-</body>
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="${request.contextPath}/static/js/lib/angular.min-v1.4.9.js"></script>
+  </head>
+  <body>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
+  </body>
 </html>
