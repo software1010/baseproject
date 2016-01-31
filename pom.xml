@@ -22,7 +22,7 @@
 		<java.language.version>1.8</java.language.version>
 		<!-- ref's version -->
 		<servlet.version>3.1.0</servlet.version>
-		<spring.version>4.1.7.RELEASE</spring.version>
+		<spring.version>4.2.4.RELEASE</spring.version>
 		<mybatis.version>3.3.0</mybatis.version>
 		<mybatis-spring.version>1.2.3</mybatis-spring.version>
 		<dubbo.version>2.5.3</dubbo.version>
@@ -102,6 +102,11 @@
 				<artifactId>spring-webmvc</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
 			<!-- Spring END -->
 
 			<!-- MyBatis BEGIN -->
@@ -157,6 +162,14 @@
 				<version>3.15.0-GA</version>
 			</dependency>
 			<!-- Dubbo END -->
+			
+			<!-- Freemarker BEGIN -->
+			<dependency>
+				<groupId>org.freemarker</groupId>
+				<artifactId>freemarker</artifactId>
+				<version>2.3.23</version>
+			</dependency>
+			<!-- Freemarker END -->
 		</dependencies>
 	</dependencyManagement>
 	<build>
