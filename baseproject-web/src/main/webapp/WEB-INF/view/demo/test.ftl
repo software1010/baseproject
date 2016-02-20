@@ -1,7 +1,7 @@
 <!doctype html>
 <html ng-app>
   <head>
-    <script src="${request.contextPath}/static/js/lib/angular.min-v1.4.9.js"></script>
+    <script src="${request.contextPath}/static/js/lib/angular.min-v1.5.0.js"></script>
   </head>
   <body>
     <div>
