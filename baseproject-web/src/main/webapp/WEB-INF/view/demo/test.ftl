@@ -1,12 +1,6 @@
-<!doctype html>
-<html lang="en" ng-app="baseproject.app">
-  <head>
-  	<meta charset="utf-8">
-    <script src="${request.contextPath}/static/js/lib/angular.min-v1.5.0.js"></script>
-    <script src="${request.contextPath}/static/js/app/controllers.js"></script>
-  </head>
-  <body>
-    <div>
+<#import "../layout/main.ftl" as layout>
+<@layout.main>
+	<div>
       <label>Name:</label>
       <input type="text" ng-model="yourName" placeholder="Enter a name here">
       <hr>
@@ -20,5 +14,4 @@
 		    </li>
 		</ul>
     </div>
-  </body>
-</html>
+</@layout.main>

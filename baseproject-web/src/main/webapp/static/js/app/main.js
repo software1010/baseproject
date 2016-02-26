@@ -4,7 +4,7 @@
  * 测试
  */
 
-angular.module('baseproject.app', []).controller('PhoneListCtrl', PhoneListCtrl);
+angular.module('baseprojectApp', []).controller('PhoneListCtrl', PhoneListCtrl);
 
 function PhoneListCtrl($scope) {
 	$scope.phones = [ {
