@@ -38,7 +38,7 @@
 						</div>
 					</div>
 					<div class="content-row pd10 tc">
-						当前用户没有任何影院
+						当前用户没有任何订单
 					</div>
 				</div>
 			</div>
