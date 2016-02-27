@@ -22,5 +22,15 @@ public class DemoController {
 	String testView() {
 		return "demo/test";
 	}
+	
+	/**
+	 * main
+	 * 
+	 * @return
+	 */
+	@RequestMapping("/main")
+	String mainView() {
+		return "demo/main";
+	}
 
 }

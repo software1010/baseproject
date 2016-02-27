@@ -1,3 +1,40 @@
 body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
 
+body{
+	overflow-y: hidden;
+}
 
+.page-header-fixed .page-container {
+  margin-top: 50px;   
+}
+/* .navbar{ */
+/* 	box-shadow: 0 1px 4px 0 rgba(0,0,0,.2),0 3px 12px 0 rgba(0,0,0,.2); */
+/* } */
+.sidebar{
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: 1px solid #eee;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.2);
+}
+.content{
+	padding: 10px;
+	background: #f2f4f8;
+	overflow-y: hidden;
+	height:10000px;
+}
+.content-row{
+	border: 1px solid #ccc;
+	border-top: none;
+	background-color: #fff; 
+	font-size: 12px;
+}
+.pd10{padding: 10px;}
+.ml10{margin-left: 10px;}
+.tc{text-align: center;}

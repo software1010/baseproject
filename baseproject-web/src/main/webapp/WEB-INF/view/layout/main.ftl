@@ -12,7 +12,7 @@
     <script src="${request.contextPath}/static/js/lib/angular.min.js?v1.5.0"></script>
     <script src="${request.contextPath}/static/js/app/main.js"></script>
   </head>
-  <body>
+  <body class="page-header-fixed">
   	<#include "topbar.ftl"/>
     <#nested/>
   </body>

@@ -21,7 +21,7 @@
         <li><a href="#">营销统计</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">注销</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注销</a></li>
       </ul>
     </div>
   </div>
