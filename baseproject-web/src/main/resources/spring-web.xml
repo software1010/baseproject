@@ -22,6 +22,16 @@
 				<entry key="xml_escape" value-ref="fmXmlEscape" />
 			</map>
 		</property>
+		<property name="defaultEncoding" value="utf-8"/>
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="template_update_delay">0</prop>
+                <prop key="locale">zh_CN</prop>
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+                <prop key="date_format">yyyy-MM-dd</prop>
+                <prop key="number_format">#.##</prop>
+            </props>
+        </property>
 	</bean>
 
 	<bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape" />
